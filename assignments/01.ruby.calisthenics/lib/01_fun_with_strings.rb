@@ -1,0 +1,3 @@
+def palindrome?(sentence)
+end
+
