@@ -16,7 +16,7 @@ describe "RPS" do
     ]
     @invalid_hand = ["Invalid", "X"]
 
-    @tournament = [
+    @tournament1 = [
       [
         [@hands[0], @hands[1]],
         [@hands[2], @hands[3]],
@@ -26,6 +26,16 @@ describe "RPS" do
         [@hands[6], @hands[7]],
       ],
     ]
+
+    @tournament2 = [
+      @hands[7],
+      [
+        [@hands[0], @hands[1]],
+        [@hands[2], @hands[3]],
+      ],
+    ]
+
+    @tournament3 = [@tournament1, @tournament2]
   end
 
   describe "During game:" do
@@ -57,8 +67,17 @@ describe "RPS" do
 
   describe "During Tournament:" do
 
+    it "should identify whether an array is a player or a game" do
+      rps_is_player?(@hands[0]).should be_true
+      rps_is_player?([@hands[0], @hands[1]]).should be_false
+      rps_is_player?(@tournament1).should be_false
+      rps_is_player?(@tournament2).should be_false
+    end
+
     it "should play all games and return one single winner" do
-      rps_tournament_winner(@tournament).should == @hands[2]
+      rps_tournament_winner(@tournament1).should == @hands[2]
+      rps_tournament_winner(@tournament2).should == @hands[7]
+      rps_tournament_winner(@tournament3).should == @hands[7]
     end
 
   end
