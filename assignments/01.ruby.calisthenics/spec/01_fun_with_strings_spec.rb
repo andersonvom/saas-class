@@ -9,8 +9,8 @@ describe Object do
   end
 
   it "should count words in a string" do
-    count_words("A man, a plan, a canal -- Panama").should be_eql( {'a' => 3, 'man' => 1, 'canal' => 1, 'panama' => 1, 'plan' => 1})
-    count_words("Doo bee doo bee doo").should be_eql({'doo' => 3, 'bee' => 2})
+    count_words("A man, a plan, a canal -- Panama").should == ( {'a' => 3, 'man' => 1, 'canal' => 1, 'panama' => 1, 'plan' => 1})
+    count_words("Doo bee doo bee doo").should == ({'doo' => 3, 'bee' => 2})
   end
 
 end
