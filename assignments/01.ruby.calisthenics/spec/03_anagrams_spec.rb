@@ -8,7 +8,7 @@ describe "Anagrams" do
     @groups = [["cars", "racs", "scar"], ["four"], ["for"], ["potatoes"], ["creams", "scream"]].sort
   end
 
-  it "should raise error if number of players is not 2" do
+  it "should correctly group anagrams into inner arrays" do
     combine_anagrams(@words).sort.should == @groups
   end
 
