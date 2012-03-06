@@ -1,4 +1,3 @@
-
 # Determines whether a given word or phrase is a palindrome, that is,
 # it reads the same backwards as forwards, ignoring case, punctuation, and
 # nonword characters. (A "nonword character" is defined for our purposes as "a
@@ -14,10 +13,7 @@ end
 # doesn't matter. A word is defined as a string of characters between word boundaries.
 def count_words(string)
   word_count = Hash.new 0
-  words = string.downcase.split(/\b/).collect {|w| w if w =~ /\w/ }.compact
-  words.each do |w|
-    word_count[w] += 1
-  end
+  words.downcase.scan(/\w+/) {|w| word_count[w] += 1 }
   word_count
 end
 
