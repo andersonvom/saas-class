@@ -1,4 +1,3 @@
-
 class Class
 
   # provides the same functionality as attr_accessor but also
@@ -10,7 +9,7 @@ class Class
       attr_reader "#{attr_name}_history"
       class_eval %Q{
         def #{attr_name}=(value)
-          @#{attr_name}_history ||= [ (@#{attr_name} || nil) ]
+          @#{attr_name}_history ||= [ @#{attr_name} ]
           @#{attr_name}_history << value
           @#{attr_name} = value
         end
