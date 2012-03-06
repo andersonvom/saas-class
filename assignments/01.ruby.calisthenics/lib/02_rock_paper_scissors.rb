@@ -15,7 +15,7 @@ end
 
 # Returns true if an array if a player. False otherwise.
 def rps_is_player?(arr)
-  arr[0].kind_of? String
+  arr and arr[0].kind_of? String
 end
 
 
