@@ -18,3 +18,17 @@ class Numeric
 
 end
 
+class String
+  def palindrome?
+    test_string = self.gsub(/[^\w]/,'').downcase
+    test_string == test_string.reverse
+  end
+end
+
+module Enumerable
+  def palindrome?
+    elements = self.collect {|i| i}
+    elements == elements.reverse
+  end
+end
+
