@@ -18,7 +18,7 @@ describe "Iterators" do
   end
 
   it "should return the correct product" do
-    collect { |e| e }.sort.should == @result.sort
+    @product.collect { |e| e }.sort.should == @result.sort
   end
 
   it "should calculate the correct empty product" do
@@ -26,7 +26,7 @@ describe "Iterators" do
   end
 
   it "should calculate different products (axb and bxa)" do
-    collect { |e| e }.sort.should_not == @inverse_product.collect { |e| e }.sort
+    @product.collect { |e| e }.sort.should_not == @inverse_product.collect { |e| e }.sort
   end
 
 end
