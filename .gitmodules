@@ -1,0 +1,3 @@
+[submodule "assignments/02.more.ruby.and.some.rails/hw2_rottenpotatoes"]
+	path = assignments/02.more.ruby.and.some.rails/hw2_rottenpotatoes
+	url = git@github.com:andersonvom/hw2_rottenpotatoes.git
