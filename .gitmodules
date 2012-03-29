@@ -4,3 +4,6 @@
 [submodule "assignments/03.bdd.and.cucumber/hw3_rottenpotatoes"]
 	path = assignments/03.bdd.and.cucumber/hw3_rottenpotatoes
 	url = git@github.com:andersonvom/hw3_rottenpotatoes.git
+[submodule "assignments/04.bdd.plus.tdd.cycle/hw4_rottenpotatoes"]
+	path = assignments/04.bdd.plus.tdd.cycle/hw4_rottenpotatoes
+	url = git@github.com:andersonvom/hw4_rottenpotatoes.git
